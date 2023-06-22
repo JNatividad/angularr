@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularr';
+  title = 'angular';
+
+
+  games = ['resident','halo','tekken']
+
+  buscar = ''
+
+
+  metodo(info:any){
+    console.log(info);
+    
+  }
 }

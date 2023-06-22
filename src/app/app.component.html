@@ -1,2 +1,23 @@
 
 <router-outlet></router-outlet>
+
+<app-show  (onInfo)="metodo($event)" [nuevo]="title"></app-show>
+
+
+<h1 [ngClass]="title==='angularr'? 't1':'t2'">Lorem, ipsum dolor.</h1>
+
+
+<p *ngIf="title==='hola';else plantilla">existe title</p>
+<ng-template #plantilla>
+  <p>no existe</p>
+</ng-template>
+
+
+
+<input [(ngModel)]="buscar" type="text" placeholder="search">
+
+<ul>
+  <li *ngFor="let item of games | search:buscar">
+    {{item}}
+  </li>
+</ul>
